@@ -9,17 +9,15 @@
     --secondary-color: #212121;
 }
 
-.dark {
+body {
+    background-color: var(--primary-color);
+    transition: all 0.7s;
+}
+
+body.dark {
     --secondary-color: #fff;
     --primary-color: #212121;
 }
-
-body {
-    background-color: var(--primary-color);
-}
-/* .dark {
-    background-color: rgb(28, 30, 83);
-} */
 
 .elm {
     cursor: pointer;
