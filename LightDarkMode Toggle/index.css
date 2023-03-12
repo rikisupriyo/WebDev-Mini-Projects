@@ -9,6 +9,8 @@
     --secondary-color: #212121;
 }
 
+
+
 body {
     background-color: var(--primary-color);
     transition: all 0.7s;
@@ -19,10 +21,15 @@ body.dark {
     --primary-color: #212121;
 }
 
+/* .dark {
+    background-color: rgb(28, 30, 83);
+} */
+
 .elm {
     cursor: pointer;
     font-size: 50px;
     line-height: 50px;
+    transition: all 0.5s;
 }
 
 .elm2 {
@@ -31,4 +38,12 @@ body.dark {
     line-height: 50px;
     font-weight: 600;
     margin: 20px;
+}
+
+.elm:hover {
+    transform: scale(1.15);
+}
+
+.elm:active {
+    transform: scale(1);
 }
