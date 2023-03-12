@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #212121;
+}
+
+.dark {
+    --secondary-color: #fff;
+    --primary-color: #212121;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+/* .dark {
+    background-color: rgb(28, 30, 83);
+} */
+
+.elm {
+    cursor: pointer;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.elm2 {
+    color: var(--secondary-color);
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    margin: 20px;
+}
