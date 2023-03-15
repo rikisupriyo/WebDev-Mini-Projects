@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #E8E8E8;
+    --secondary-color: #404040;
+}
+
+.dark {
+    --primary-color:#404040;
+    --secondary-color:#E8E8E8;
+}
+
+body {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.5s ease-in;
+}
+
+.toggle {
+    font-size: 20px;
+    line-height: 20px;
+    border-radius: 10px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100px;
+    font-family: cursive;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.toggle:hover {
+    transform: scale(1.05);
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.hands {
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s;
+}
+
+.hands.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.hands.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+}
+
+.hands.second {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    background-color: #e74c3c;
+}
+
+.center-point {
+    background-color: #e74c3c;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-point::after {
+    content: "";
+    background-color: var(--secondary-color);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time {
+    font-size: 50px;
+    color: var(--secondary-color);
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: serif;
+}
+
+.time:hover {
+    transform: scale(1.05);
+    color: red;
+}
+
+.date {
+    color: var(--secondary-color);
+    font-size: 20px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+}
+
+.date:hover {
+    transform: scale(1.05);
+    color: red;
+}
+
+.circle {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 18px;
+    font-size: 18px;
+    transition: all 0.5s ease-in;  
+}
